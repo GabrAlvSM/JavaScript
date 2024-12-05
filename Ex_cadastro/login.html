@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login JavaScripto</title>
+
+    <script src="script.js" defer></script>
+</head>
+<body style="margin: 0; padding: 0;">
+    <main style="height: 100vh; width: 100w; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: darkslategrey;">
+        <header id="header" style="height: 10vh; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 5vh;">
+            <h1>-- Login --</h1>
+            <h3>Quinta Feira!</h3>
+        </header>
+
+        <div style="display: flex; align-items: center; justify-content: center;">
+            <form id="formulario" class="form_cad" method="POST" style="display: flex; flex-direction: column; gap: 5px;">
+                <label for="email">Login: </label>
+                <input type="text" id="email" name="email" placeholder="E-mail">
+                <br>
+        
+                <label for="senha">Senha: </label>
+                <input type="password" id="senha" name="senha" placeholder="Senha">
+                <br>
+        
+                <label for="confirma_senha">Confirma senha: </label>
+                <input type="password" id="confirma_senha" name="confirma_senha" placeholder="Confima senha">
+                <br>
+
+                <!-- <label for="nome">Sexo</label>
+                <select name="sexo" id="sexo">
+                    <option selected disabled>Escolha o sexo do animal</option>
+                    <option value="F">Feminino</option>
+                    <option value="M">Masculino</option>
+                </select>
+                <br> -->
+        
+                <input type="submit" name="cad" id="cad" value="Cadastrar" onclick="valida_cad(event)">
+        
+            </form>
+        </div>
+
+        <div>
+            <span id="texto"></span>
+        </div>
+    </main>
+</body>
+</html>
