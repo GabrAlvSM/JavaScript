@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(39, 40, 49); color: #fff;">
+    <h1>Página Inicial</h1>
+    <div>
+        <h3 id="nome"></h3>
+        <span id="profissao"></span>
+        <br>
+        <span id="idade"></span>
+    </div>
+
+    <script>
+        const nome = document.getElementById("nome");
+        const profissao = document.getElementById("profissao");
+        const idade = document.getElementById("idade");
+
+        fetch('./dados.json')
+        .then(
+            function(resposta){
+                return resposta.json()
+            }
+        )
+        .then(
+            function(json){
+                nome.innerText = json.nome;
+                profissao.innerText = json.profissao;
+                idade.innerText = json.idade;
+            }
+        )
+    </script>
+</body>
+</html>
